@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<package name="hello" namespace="" extends="struts-default">  
+      <action name="login" class="com.action.LoginAction" >  
+         <result name="success">/index.jsp</result>  
+         <result name="loginError">/error.jsp</result>  
+      </action>  
+      
+      <action name="showBasicData" class="com.action.showDataAction" method="basicData">
+         <result name="success">/basic_data.jsp</result>  
+      </action>
+      
+      <action name="showModelData" class="com.action.showDataAction" method="modelData"> 
+         <result name="success">/model_data2.jsp</result>
+      </action>
+      
+      <action name="growbigger" class="com.action.GrowthAction">
+      	<result name="success">/model_data2.jsp</result>
+      </action>
+      
+      <action name="register" class="com.action.RegisterAction">
+      	<result name="success">/index.jsp</result>
+      	<result name="failed">/error.jsp</result>
+      </action>
+      
+      <action name="imgResults" class="com.action.webSearchAction" method="imgResults">
+      	<result name="success">/imagesSearchResults.jsp</result>
+      </action>
+      
+      <action name="webResults" class="com.action.webSearchAction" method="webResults">
+      	<result name="success">/webSearchResults.jsp</result>
+      </action>
+      
+      <action name="changeBasicData" class="com.action.changeBasicDataAction">
+      	<result>/my_cyber-I.jsp</result>
+      </action>
+      
+      <action name="saveWebResults" class="com.action.saveResults" method="saveWebResults">
+      	<result name="success">/my_cyber-I.jsp</result>
+      </action>
+      
+      <action name="saveImageResults" class="com.action.saveResults" method="saveImageResults">
+   		<result name="success">/my_cyber-I.jsp</result>
+      </action>
+      
+      <action name="scheduling" class="com.action.ManageAction" method="setScheduling">
+      	<result name="success">/my_cyber-I.jsp</result>
+      </action>
+      
+       <action name="showLog" class="com.action.showLog" >
+      	<result name="success">/growthLog.jsp</result>
+      </action>
+   </package>  
+   
+
+</struts>
